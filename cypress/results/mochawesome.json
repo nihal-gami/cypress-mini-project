@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-03-15T11:29:20.836Z",
+    "end": "2023-03-15T11:29:21.045Z",
+    "duration": 209,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cc86a83c-4577-4066-855f-e2e1f498d23a",
+      "title": "",
+      "fullFile": "cypress/Integration/myTests/amazon.spec.js",
+      "file": "cypress/Integration/myTests/amazon.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "88af262c-41bb-43e9-9cb6-f866fe278ca1",
+          "title": "Navigation test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able to navigate through all links on Amazon.in",
+              "fullTitle": "Navigation test should be able to navigate through all links on Amazon.in",
+              "timedOut": null,
+              "duration": 159,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "it('should check for broken links on the page', () => {\n  cy.visit('https://www.w3schools.com/').get('a').each(link => {\n    cy.request(link.prop('href')).then(response => {\n      expect(response.status).to.eq(200);\n    }).catch(err => {\n      cy.log(`Broken link: ${link.prop('href')}`);\n    });\n  });\n});",
+              "err": {},
+              "uuid": "207f474a-12b4-4bfa-84ae-180aba40c442",
+              "parentUUID": "88af262c-41bb-43e9-9cb6-f866fe278ca1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "207f474a-12b4-4bfa-84ae-180aba40c442"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 159,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
