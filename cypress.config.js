@@ -8,16 +8,16 @@ module.exports = defineConfig({
   reporter: 'mochawesome',
   reporterOptions: {
     reportDir: 'cypress/results',
-    overwrite: false,
+    overwrite: true,
     html: true,
-    json: true,
+    json: false,
   },
 
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    specPattern: 'cypress/Integration/myTests/*.js'
+    specPattern: 'cypress/Integration/**/*.spec.js'
   },
 
 });
