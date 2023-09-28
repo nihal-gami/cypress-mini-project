@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 import { LoginPage } from "../../support/pageObjects/LoginPage";
 
 describe("Login Tests", () => {
@@ -15,7 +17,8 @@ describe("Login Tests", () => {
       .fillPassword(data.user1.password)
       .submitForm();
 
-    loginPage.getErrorMessage().should("be.visible");
+    // assert that login is successful and user is redirected to the dashboard
+    cy.url().should('include', '/shop')
 
     // cy.url().should("include", "/product");
 });
@@ -30,7 +33,7 @@ describe("Login Tests", () => {
       .fillPassword(user.user2.password)
       .submitForm();
 
-    loginPage.getErrorMessage().should("be.visible");
+    loginPage.getErrorMessage().should('be.visible');
   });
 });
 });

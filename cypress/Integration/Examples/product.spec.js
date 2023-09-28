@@ -1,4 +1,3 @@
-import { LoginPage } from "../../support/pageObjects/LoginPage";
 import { ProductPage } from "../../support/pageObjects/ProductPage";
 
 describe("Product Tests", () => {
